@@ -1,5 +1,14 @@
 {
-	"pages": [{
+	"pages": [
+		{
+		    "path" : "pages/song/song",
+		    "style" : {
+					"app-plus":{
+						"titleNView":false
+					}
+				}
+		},
+		{
 			"path": "pages/index/index",
 			"style": {
 				"app-plus": {
@@ -17,7 +26,6 @@
 				"navigationBarTextStyle": "black"
 			}
 		}
-
     ],
 	"tabBar": {
 		"color": "#707070",
@@ -40,6 +48,8 @@
 		"navigationBarBackgroundColor": "#FFFFFF00",
 		"backgroundColor": "#FFFFFF",
 		"navigationBarTextStyle": "black"
+		
+		
 	}
 
 
