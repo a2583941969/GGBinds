@@ -12,7 +12,7 @@
 			}
 		},
 		mounted(){
-			console.log("李伟修改的")
+		
 		},
 		methods: {
 			add(a,b){
