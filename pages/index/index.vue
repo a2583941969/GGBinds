@@ -1,0 +1,56 @@
+<template>
+	<view class="index">
+		 <!-- 顶部搜索框 -->
+		 <view class="inputbox">
+			 <input placeholder="搜索热门的心情电台" placeholder-style="color:#C0C0C0" />
+		 </view>
+		 <!-- 测试组件 -->
+		 <my-alnum :name="name" :page_img="page_img" :chanteur="chanteur" :id="aid" :bool="false" :total_songs="total_songs"></my-alnum>
+		 <my-songlist></my-songlist>
+		 <!-- 测试组件结束 -->
+	</view>
+</template>
+
+<script>
+	import myAlnum from "../../myComponents/my-alnum/myAlnum.vue"
+	import mySonglist from "../../myComponents/my-songlist/mySongList.vue"
+	export default {
+		components:{
+			myAlnum,
+			mySonglist
+		},
+		data() {
+			return {
+				// 以下为测试数据
+				name:"IWMT",
+				page_img:"https://img01.dmhmusic.com/0412/M00/23/27/ChAKEV9NWcGANO1AAGkZ_Pa2DZs986.jpg@w_400,h_400",
+				chanteur:"Rider",
+				aid:32132,
+				total_songs:28
+			}
+		},
+		
+		methods: {
+			
+		},
+		
+		mounted(){
+			console.log(this.store.state.uname)
+		}
+	}
+</script>
+
+<style>
+
+.index>.inputbox{
+	border: 1px solid gray;
+	padding: 15rpx 15rpx;
+	width: 80%;
+	border-radius: 5rpx;
+	margin: 90rpx auto;
+	border: 0;
+	outline: 0;
+	box-shadow: 10rpx 5rpx 30rpx #C0C0C0;
+	font-size: 20rpx;
+}
+</style>
