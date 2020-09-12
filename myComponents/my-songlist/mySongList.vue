@@ -1,6 +1,6 @@
 <template>
 	<view class="songlist">
-		啊
+		
 	</view>
 </template>
 
