@@ -1,14 +1,16 @@
 <template>
 	<view class="album">
-		<view>
-			<image :src="page_img" mode="widthFix"></image>
-			<view class="btn" @click="playThisAlnum">
+		<navigator url="pages/mine/mine">
+			<view>
+				<image :src="page_img" mode="widthFix"></image>
+				<view class="btn" @click="playThisAlnum">
+				</view>
 			</view>
-		</view>
-		<view class="album_info">
-			<text class="title">{{name}}</text>
-			<text class="author">{{bool?total_songs+'首单曲':chanteur}}</text>
-		</view>
+			<view class="album_info">
+				<text class="title">{{name}}</text>
+				<text class="author">{{bool?total_songs+'首单曲':chanteur}}</text>
+			</view>
+		</navigator>
 	</view>
 </template>
 
@@ -43,13 +45,13 @@
 		margin-right: 20rpx;
 	}
 
-	view.album image {
+	view.album>navigator image {
 		width: 100%;
 	}
-view.album>view{
+view.album view{
 	position: relative;
 }
-view.album>view>view.btn{
+view.album>navigator>view>view.btn{
 	position: absolute;
 	bottom: 20rpx;
 	right: 20rpx;
@@ -60,13 +62,13 @@ view.album>view>view.btn{
 	background-size: cover;
 }
 
-	view.album>view.album_info {
+	view.album>navigator>view.album_info {
 		display: flex;
 		margin-top: 24rpx;
 		flex-direction: column;
 	}
 
-	view.album>view.album_info>text.title {
+	view.album>navigator>view.album_info>text.title {
 		font-size: 28rpx;
 		font-weight: 600;
 		text-overflow:ellipsis; 
@@ -74,7 +76,7 @@ view.album>view>view.btn{
 		text-overflow:ellipsis;    
 		whitewhite-space: nowrap;
 	}
-	view.album>view.album_info>text.author {
+	view.album>navigator>view.album_info>text.author {
 		font-size: 24rpx;
 		color: #666;
 		margin-top: 12rpx;
