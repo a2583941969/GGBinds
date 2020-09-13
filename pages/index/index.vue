@@ -8,6 +8,7 @@
 		 <my-alnum :name="name" :page_img="page_img" :chanteur="chanteur" :id="aid" :bool="false" :total_songs="total_songs"></my-alnum>
 		 <my-songlist></my-songlist>
 		 <!-- 测试组件结束 -->
+		 <AlbumPlay></AlbumPlay>
 	</view>
 </template>
 
