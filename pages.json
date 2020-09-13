@@ -25,6 +25,13 @@
 				},
 				"navigationBarTextStyle": "black"
 			}
+		}	,{
+		    "path" : "pages/song/song",
+		    "style" : {
+					"app-plus":{
+						"titleNView":false
+					}
+				}
 		}
     ],
 	"tabBar": {

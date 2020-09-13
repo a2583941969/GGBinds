@@ -1,6 +1,7 @@
 <template>
 	<view>
 		这是个人中心页
+
 	</view>
 </template>
 
@@ -15,9 +16,7 @@
 		
 		},
 		methods: {
-			add(a,b){
-				return a+b
-			}
+
 		}
 	}
 </script>
