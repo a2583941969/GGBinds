@@ -6,7 +6,7 @@
 		 </view>
 		 <!-- 测试组件 -->
 		 <my-alnum :name="name" :page_img="page_img" :chanteur="chanteur" :id="aid" :bool="false" :total_songs="total_songs"></my-alnum>
-		 <my-songlist></my-songlist>
+		 <my-songlist :sid="sid" :sname="sname" :alnumName="alnumName" :singer="singer":sing_img="sing_img" :isAlnum="false"></my-songlist>
 		 <!-- 测试组件结束 -->
 	</view>
 </template>
@@ -21,12 +21,18 @@
 		},
 		data() {
 			return {
-				// 以下为测试数据
+				// 以下为my-alnum组件测试数据
 				name:"IWMT",
 				page_img:"https://img01.dmhmusic.com/0412/M00/23/27/ChAKEV9NWcGANO1AAGkZ_Pa2DZs986.jpg@w_400,h_400",
 				chanteur:"Rider",
 				aid:32132,
-				total_songs:28
+				total_songs:28,
+				// 以下为my-songlist测试数据
+				sid:132134,
+				sname:"Autumn Leaves",
+				alnumName:"Autumn Leaves",
+				singer:"Mark Parr",
+				sing_img:"https://img01.dmhmusic.com/0412/M00/22/41/ChAKEV9MMKmAeQS0AIyoeZle7xw520.jpg@w_200,h_200"
 			}
 		},
 		
@@ -35,7 +41,7 @@
 		},
 		
 		mounted(){
-			console.log(this.store.state.uname)
+	
 		}
 	}
 </script>

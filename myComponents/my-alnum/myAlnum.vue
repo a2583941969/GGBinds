@@ -70,7 +70,7 @@ view.album>navigator>view>view.btn{
 
 	view.album>navigator>view.album_info>text.title {
 		font-size: 28rpx;
-		font-weight: 600;
+		font-weight: 900;
 		text-overflow:ellipsis; 
 		overflow: hidden;    
 		text-overflow:ellipsis;    

@@ -11,4 +11,7 @@ export default {
 	src: url('/static/uni.ttf');
 }
 /* #endif */
+uni-tabbar, uni-tabbar .uni-tabbar{
+	z-index: 10;
+}
 </style>

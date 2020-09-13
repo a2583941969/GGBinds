@@ -1,14 +1,6 @@
 {
 	"pages": [
 		{
-		    "path" : "pages/song/song",
-		    "style" : {
-					"app-plus":{
-						"titleNView":false
-					}
-				}
-		},
-		{
 			"path": "pages/index/index",
 			"style": {
 				"app-plus": {
@@ -16,6 +8,14 @@
 				},
 				"navigationBarTextStyle": "black"
 			}
+		},
+		{
+		    "path" : "pages/song/song",
+		    "style" : {
+					"app-plus":{
+						"titleNView":false
+					}
+				}
 		},
 		{
 			"path": "pages/mine/mine",
