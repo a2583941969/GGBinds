@@ -1,7 +1,7 @@
 //设置默认端口号
 const baseUrl ='http://localhost:3000/';
 //封装一个请求的函数
-export const myRequest=(options)={
+export const myRequest=(options)=>{
 	return new Promise((resolve,reject)=>{
 		uni.request({
 			//访问路径
@@ -10,7 +10,7 @@ export const myRequest=(options)={
 			method:options.method || 'GET',
 			//如果没有返回数据，就为空对象
 			data:options.data || {},
-			success:res=>{
+			success:res=>{	
 				resolve(res)
 			},
 			fail:err=>{

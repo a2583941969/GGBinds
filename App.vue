@@ -1,4 +1,3 @@
-
 <script>
 export default {
 }
@@ -13,6 +12,6 @@ export default {
 }
 /* #endif */
 uni-tabbar, uni-tabbar .uni-tabbar{
-	z-index: 10;
+	z-index: auto;
 }
 </style>

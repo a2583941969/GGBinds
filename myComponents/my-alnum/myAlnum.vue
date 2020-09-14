@@ -1,6 +1,6 @@
 <template>
 	<view class="album">
-		<navigator url="pages/mine/mine">
+		<navigator @click="goto" hover-class="none" animation-type="none">
 			<view>
 				<image :src="page_img" mode="widthFix"></image>
 				<view class="btn" @click="playThisAlnum">
@@ -33,7 +33,13 @@
 			playThisAlnum(){
 				// 发送获取当前歌单歌曲的请求
 				// 发送获取当前歌单第一首歌url的请求
-				alert(this.id)
+				console.log(132132)
+			},
+			goto(){
+				uni.navigateTo({
+					url:"/pages/mine/mine",
+					animationType:"none"
+				})
 			}
 		}
 	}
@@ -60,6 +66,7 @@ view.album>navigator>view>view.btn{
 	border-radius: 50%;
 	background: url('../../static/icon/play-filled.png') center center no-repeat;
 	background-size: cover;
+	z-index: 20;
 }
 
 	view.album>navigator>view.album_info {
