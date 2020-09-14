@@ -15,7 +15,7 @@
       </navigator>
       <!-- 收藏按钮 -->
       <view class="collect">
-        <text :class="{collectActive:collect}">{{collect?"已收藏":"收藏"}}</text>
+        <text @click="handleCollect" :class="{collectActive:collect}">{{collect?"已收藏":"收藏"}}</text>
       </view>
     </view>
   </view>
@@ -33,11 +33,26 @@
         // collect代表当前歌手是否被收藏,true代表已收藏,false代表未收藏
         collect: false
       }
+    },
+    methods: {
+      handleCollect() {
+        if (this.collect == true) {
+          this.collect = false;
+          console.log("取消收藏")
+        } else {
+          this.collect = true;
+          console.log("收藏")
+        }
+      }
     }
   }
 </script>
 
 <style>
+  .Live-Band {
+    margin-bottom: 100rpx;
+  }
+
   .Live-Band>.Singer-info {
     width: 196rpx;
     height: 314rpx;
