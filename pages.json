@@ -25,7 +25,6 @@
 				},
 				"navigationBarTextStyle": "black"
 			}
-<<<<<<< HEAD
 		},
 		{
 			"path": "pages/songlist/songlist",
@@ -34,16 +33,7 @@
 				"navigationBarTextStyle":"black",
 				"enablePullDownRefresh":false
 			}
-=======
-		}	,{
-		    "path" : "pages/song/song",
-		    "style" : {
-					"app-plus":{
-						"titleNView":false
-					}
-				}
->>>>>>> master
-		}
+		}	
     ],
 	"globalStyle": {
 		"navigationBarBackgroundColor": "#FFFFFF00",
