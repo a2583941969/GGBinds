@@ -7,10 +7,6 @@ Vue.config.productionTip = false
 import AlbumPlay from './myComponents/click-to-play/click-to-play.vue'
 Vue.component('AlbumPlay',AlbumPlay);
 
-//将封装好的请求函数，挂载在main.js
-import {myRequest} from './request/myRequest.js'
-Vue.prototype.$myReq = myRequest;
-
 Vue.prototype.store=store
 App.mpType = 'app'
 
