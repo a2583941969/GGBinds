@@ -18,11 +18,8 @@
 <script>
 	import myAlnum from "../../myComponents/my-alnum/myAlnum.vue"
 	import mySonglist from "../../myComponents/my-songlist/mySongList.vue"
-<<<<<<< HEAD
-	import myTabbar from "../../myCompo	nents/my-tabbar/myTabbar.vue"
-=======
 	import myTabbar from "../../myComponents/my-tabbar/myTabbar.vue"
->>>>>>> Zhao
+
 	export default {
 		components: {
 			myAlnum,
@@ -31,16 +28,13 @@
 		},
 		data(){
 			return {
-<<<<<<< HEAD
+
 				
 			}
 		},
-=======
-				banner:[]
-			}
-		},
 
->>>>>>> Zhao
+
+
 		methods: {
 			// 请求方法
 			async getMsg(){
@@ -56,17 +50,7 @@
 					animationType:"zoom-fade-out"
 				})
 			}
-<<<<<<< HEAD
 		},
-=======
-		},
-		created(){
-			
-		},
-		mounted() {
-
-		}
->>>>>>> Zhao
 	}
 </script>
 
