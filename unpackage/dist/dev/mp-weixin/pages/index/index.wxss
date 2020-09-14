@@ -1,0 +1,13 @@
+
+.index>.inputbox{
+	border: 1px solid gray;
+	padding: 15rpx 15rpx;
+	width: 80%;
+	border-radius: 5rpx;
+	margin: 90rpx auto;
+	border: 0;
+	outline: 0;
+	box-shadow: 10rpx 5rpx 30rpx #C0C0C0;
+	font-size: 20rpx;
+}
+

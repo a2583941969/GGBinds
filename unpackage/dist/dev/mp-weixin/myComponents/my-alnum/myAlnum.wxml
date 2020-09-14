@@ -1,0 +1,1 @@
+<view class="album"><view><image src="{{page_img}}" mode="widthFix"></image><view data-event-opts="{{[['tap',[['playThisAlnum',['$event']]]]]}}" class="btn" bindtap="__e"></view></view><view class="album_info"><text class="title">{{name}}</text><text class="author">{{bool?total_songs+'首单曲':chanteur}}</text></view></view>

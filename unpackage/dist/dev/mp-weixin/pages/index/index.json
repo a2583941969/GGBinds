@@ -1,0 +1,7 @@
+{
+  "navigationBarTextStyle": "black",
+  "usingComponents": {
+    "my-alnum": "/myComponents/my-alnum/myAlnum",
+    "my-songlist": "/myComponents/my-songlist/mySongList"
+  }
+}

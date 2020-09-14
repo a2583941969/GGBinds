@@ -1,0 +1,45 @@
+
+view.album {
+		width: 300rpx;
+		margin-right: 20rpx;
+}
+view.album image {
+		width: 100%;
+}
+view.album>view{
+	position: relative;
+}
+view.album>view>view.btn{
+	position: absolute;
+	bottom: 20rpx;
+	right: 20rpx;
+	width: 70rpx;
+	height: 70rpx;
+	border-radius: 50%;
+	background: url(data:image/png;base64,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) center center no-repeat;
+	background-size: cover;
+}
+view.album>view.album_info {
+		display: -webkit-box;
+		display: -webkit-flex;
+		display: flex;
+		margin-top: 24rpx;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		-webkit-flex-direction: column;
+		        flex-direction: column;
+}
+view.album>view.album_info>text.title {
+		font-size: 28rpx;
+		font-weight: 600;
+		text-overflow:ellipsis; 
+		overflow: hidden;    
+		text-overflow:ellipsis;    
+		whitewhite-space: nowrap;
+}
+view.album>view.album_info>text.author {
+		font-size: 24rpx;
+		color: #666;
+		margin-top: 12rpx;
+}
+

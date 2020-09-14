@@ -1,0 +1,1 @@
+<view class="index"><view class="inputbox"><input placeholder="搜索热门的心情电台" placeholder-style="color:#C0C0C0"/></view><my-alnum vue-id="8dd740cc-1" name="{{name}}" page_img="{{page_img}}" chanteur="{{chanteur}}" id="{{aid}}" bool="{{false}}" total_songs="{{total_songs}}" bind:__l="__l"></my-alnum><my-songlist vue-id="8dd740cc-2" bind:__l="__l"></my-songlist></view>
