@@ -31,7 +31,6 @@
 
 			}
 		},
-
 		methods: {
 			// 请求方法
 			async getMsg(){
