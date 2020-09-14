@@ -7,16 +7,14 @@
 		<!-- 歌曲信息 -->
 		<view class="songlist-info">
 			<view>{{sname}}</view>
-			<view>{{isAlnum?singer:alnumName}}</view>
-		</view>
-		<!-- 歌曲时长 -->
-		<view class="time">
+			<view>{{alnumName||singer}}</view>
 		</view>
 		<!-- 右侧内容  -->
 		<!-- 插槽 默认显示歌曲下载 -->
-		<slot>
-			<view class="songlist-right-btn" @click="openDownLoad">
-			</view>
+		<view class="sing-count">	
+			<slot>
+				<view class="songlist-right-btn" @click="openDownLoad">
+				</view>
 				<uni-popup ref="popup" type="bottom">
 					<view class="bottom">
 						<view class="singname">
@@ -31,14 +29,15 @@
 						</view>
 					</view>
 				</uni-popup>
-		</slot>
+			</slot>
+		</view>
 	</view>
 </template>
 
 <script>
 	import uniPopup from '@/components/uni-popup/uni-popup.vue'
 	export default {
-		components:{
+		components: {
 			uniPopup
 		},
 		// 歌曲id
@@ -50,11 +49,11 @@
 		props: ["sid", "sname", "alnumName", "singer", "isAlnum", "sing_img"],
 		data() {
 			return {
-				
+
 			}
 		},
-		methods:{
-			openDownLoad(){
+		methods: {
+			openDownLoad() {
 				this.$refs.popup.open()
 			}
 		}
@@ -62,7 +61,7 @@
 </script>
 <style>
 	view.songlist {
-		width: 550rpx;
+		width: 700rpx;
 		margin-right: 20rpx;
 		padding-right: 30rpx;
 		box-sizing: border-box;
@@ -74,6 +73,7 @@
 		width: 130rpx;
 		height: 130rpx;
 		margin-right: 30rpx;
+		border-radius: 130rpx;
 	}
 
 	view.songlist>view.songlist-leftimg>image {
@@ -102,50 +102,67 @@
 	view.songlist>view.songlist-info>view:last-child {
 		font-size: 26rpx;
 		color: #666;
+
 	}
 
-	view.songlist>view.songlist-right-btn {
+	view.songlist view.songlist-right-btn {
 		width: 30rpx;
+		height: 100%;
 		background-image: url(../../static/icon/singdetail.png);
 		background-position: center;
 		background-repeat: no-repeat;
 		background-size: 60rpx 60rpx;
 	}
-	view.bottom{
+
+	view.songlist view.sing-count {
+		font-size: 28rpx;
+		color: #666;
+		display: flex;
+		align-items: center;
+	}
+
+	view.bottom {
 		background-color: #fff;
 		border-top-left-radius: 50rpx;
 		border-top-right-radius: 50rpx;
+		z-index: 200;
 	}
-	view.bottom>view.singname{
+
+	view.bottom>view.singname {
 		text-align: center;
 		font-size: 28rpx;
-		padding: 30rpx 0;
+		padding: 40rpx 0;
 		border-bottom: 1px solid #ccc;
 	}
-	view.bottom>view.downLoad{
+
+	view.bottom>view.downLoad {
 		display: flex;
 		justify-content: space-around;
 		font-size: 28rpx;
 	}
-	view.bottom>view.downLoad>view{
+
+	view.bottom>view.downLoad>view {
 		position: relative;
 		flex: 1;
 		text-align: center;
-		padding: 30rpx 0;
+		padding: 50rpx 0;
 	}
-	view.bottom>view.downLoad>view::before{
+
+	view.bottom>view.downLoad>view::before {
 		content: '';
 		display: block;
 		width: 100rpx;
 		height: 80rpx;
-		background: url(../../static/icon/G_soucang.png) center  no-repeat;
+		background: url(../../static/icon/G_soucang.png) center no-repeat;
 		background-size: 60rpx;
 		margin: 0 auto;
 	}
-	view.bottom>view.downLoad>view:nth-child(2)::before{
+
+	view.bottom>view.downLoad>view:nth-child(2)::before {
 		background-image: url(../../static/icon/G_xiazai.png);
 	}
-	view.bottom>view.downLoad>view:nth-child(3)::before{
+
+	view.bottom>view.downLoad>view:nth-child(3)::before {
 		background-image: url(../../static/icon/G_fenxiang.png);
-	}
+	}	
 </style>
