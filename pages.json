@@ -1,5 +1,6 @@
 {
-	"pages": [{
+	"pages": [
+		{
 			"path": "pages/index/index",
 			"style": {
 				"app-plus": {
@@ -9,6 +10,14 @@
 			}
 		},
 		{
+		    "path" : "pages/song/song",
+		    "style" : {
+					"app-plus":{
+						"titleNView":false
+					}
+				}
+		},
+		{
 			"path": "pages/mine/mine",
 			"style": {
 				"app-plus": {
@@ -16,6 +25,7 @@
 				},
 				"navigationBarTextStyle": "black"
 			}
+<<<<<<< HEAD
 		},
 		{
 			"path": "pages/songlist/songlist",
@@ -24,8 +34,16 @@
 				"navigationBarTextStyle":"black",
 				"enablePullDownRefresh":false
 			}
+=======
+		}	,{
+		    "path" : "pages/song/song",
+		    "style" : {
+					"app-plus":{
+						"titleNView":false
+					}
+				}
+>>>>>>> master
 		}
-
     ],
 	"tabBar": {
 		"color": "#707070",
@@ -48,6 +66,8 @@
 		"navigationBarBackgroundColor": "#FFFFFF00",
 		"backgroundColor": "#FFFFFF",
 		"navigationBarTextStyle": "black"
+		
+		
 	}
 
 

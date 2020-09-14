@@ -40,7 +40,7 @@
 						</view>
 						<!-- 歌曲信息 -->
 						<view class="songinfo">
-							<text></text>
+							<text>1</text>
 							<text></text>
 						</view>
 						<!-- 歌曲时长	 -->
@@ -64,12 +64,15 @@
 	export default{
 		data(){
 			return{
-				
+				 
 			}
 		},
 		methods:{
-			getsong(){
-				
+			async getsong(){
+				let res = await this.$myReq({
+					url:"song/url?id=1407551413"
+				})
+				console.log(res)
 			}
 		}
 	}
