@@ -3,7 +3,7 @@
   <view class="Live-Band">
     <view class="Singer-info">
       <!-- 歌手信息 -->
-      <navigator url="">
+      <navigator url="/pages/SingerDetails/SingerDetails" open-type="navigate">
         <!-- 歌手头像 -->
         <view class="Singer-avatar">
           <image :src="SingerAvatar" mode="widthFix"></image>
@@ -38,13 +38,19 @@
       handleCollect() {
         if (this.collect == true) {
           this.collect = false;
-          console.log("取消收藏")
+          uni.showToast({
+            title: "取消收藏成功",
+            mask: true
+          })
         } else {
           this.collect = true;
-          console.log("收藏")
+          uni.showToast({
+            title: "收藏成功",
+            mask: true
+          })
         }
-      }
-    }
+      },
+    },
   }
 </script>
 
