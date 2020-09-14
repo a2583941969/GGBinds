@@ -41,7 +41,7 @@
 						<!-- 歌曲信息 -->
 						<view class="songinfo">
 							<text>1</text>
-							<text></text>
+							<text>2</text>
 						</view>
 						<!-- 歌曲时长	 -->
 						<view class="songtime">
