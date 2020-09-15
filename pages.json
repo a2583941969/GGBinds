@@ -25,7 +25,16 @@
 				},
 				"navigationBarTextStyle": "black"
 			}
-		}
+		},
+		{
+			"path": "pages/songlist/songlist",
+			"style":{
+				"navigationBarBackgroundColor":"#FFFFFF",
+				"navigationBarTextStyle":"black",
+				"enablePullDownRefresh":false
+			}
+
+		}	
     ],
 	"globalStyle": {
 		"navigationBarBackgroundColor": "#FFFFFF00",

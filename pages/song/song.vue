@@ -17,8 +17,8 @@
 			<view class="playControl">
 				<image src="../../static/icon/loop.png" mode="widthFix"></image>
 				<image src="../../static/icon/prev.png" mode="widthFix" @click="prevSong"></image>
-				<image :src="this.$store.state.musicOn?'../../static/icon/pause-outline-filled.png':'../../static/icon/play-filled.png'" mode="widthFix"
-				 @click="startPlay"></image>
+				<image :src="this.$store.state.musicOn?'../../static/icon/pause-outline-filled.png':'../../static/icon/play-filled.png'"
+				 mode="widthFix" @click="startPlay"></image>
 				<image src="../../static/icon/next.png" mode="widthFix" @click="nextSong"></image>
 				<image src="../../static/icon/time.png" mode="widthFix"></image>
 			</view>
@@ -53,7 +53,7 @@
 				isPlay: true,
 				audioEle: null,
 				currentTime: null,
-				aa:1
+				aa: 1
 			}
 		},
 		onLoad(options) {
@@ -68,35 +68,30 @@
 					console.log(res[1].data.data[0])
 					this.songUrl = res[1].data.data[0].url;
 					// 如果状态管理器里面没有实例化的音乐
-					if(this.store.state.audioEle===''){
-					//就实例化音乐
-					this.store.commit('setAudioEle',uni.createInnerAudioContext());
-					let {audioEle} =this.store.state;
-					
-					console.log(audioEle,this.aa)
-					this.aa++
-					if (!this.store.state.musicOn) { //如果当前没有音乐在播放的时候
-						audioEle.autoplay = true;
-						console.log(this.songUrl)
-						audioEle.src = this.songUrl;
-						audioEle.loop = true;
-						audioEle.onTimeUpdate(() => {
-							//获取当前的播放时间，存到data中
-							this.currentTime = audioEle.currentTime
-						});
-						// 当音乐播放的时候
-						audioEle.onPlay(() => {
-							this.store.commit('setMusicOn', true)
-							console.log(this.store.state.musicOn)
-						});
-						// 当音乐暂停的时候
-						audioEle.onPause(() => {
-							this.store.commit('setMusicOn', false)
-							console.log(this.store.state.musicOn)
-						})
-					} else { //如果当前有音乐在播放，那就把已经创建的实例
-						console.log(audioEle)
-					}
+					if (this.store.state.audioEle === '') {
+						//就实例化音乐
+						this.store.commit('setAudioEle', uni.createInnerAudioContext());
+						let {
+							audioEle
+						} = this.store.state;
+						if (!this.store.state.musicOn) { //如果当前没有音乐在播放的时候
+							audioEle.autoplay = true;
+							console.log(this.songUrl)
+							audioEle.src = this.songUrl;
+							audioEle.loop = true;
+							audioEle.onTimeUpdate(() => {
+								//获取当前的播放时间，存到data中
+								this.currentTime = audioEle.currentTime
+							});
+							// 当音乐播放的时候
+							audioEle.onPlay(() => {
+								this.store.commit('setMusicOn', true)
+							});
+							// 当音乐暂停的时候
+							audioEle.onPause(() => {
+								this.store.commit('setMusicOn', false)
+							})
+						}
 					}
 				})
 			}
@@ -115,11 +110,10 @@
 				uni.navigateBack()
 			},
 			startPlay() {
-				let {audioEle} =this.store.state;
+				let {
+					audioEle
+				} = this.store.state;
 				this.isPlay = !this.isPlay;
-				console.log(this.store.state.musicOn)
-			
-				console.log(audioEle.paused)
 				//若全局有音乐在播放，点击事件就应该让他停止
 				if (this.store.state.musicOn) {
 					audioEle.pause();
@@ -134,8 +128,6 @@
 </script>
 
 <style>
-
-
 	.playBox .more {
 		width: 750rpx;
 		display: flex;
@@ -167,6 +159,7 @@
 		flex-wrap: nowrap;
 		justify-content: space-around;
 	}
+
 	.playControl>image {
 		width: 50rpx;
 		height: 50rpx;
@@ -176,9 +169,11 @@
 		width: 150rpx;
 		height: 150rpx;
 	}
+
 	.playControl>image:not(:nth-child(3)) {
 		margin-top: 60rpx;
 	}
+
 	.playBox {
 		width: 750rpx;
 		height: 40%;
@@ -186,23 +181,29 @@
 		bottom: 0;
 		background-color: transparent;
 	}
+
 	.songContent {
 		margin: 28% 90rpx;
 	}
+
 	.albumName-title {
 		font-size: 70rpx;
 	}
+
 	.albumName,
 	.singer {
 		font-size: 25rpx;
 	}
+
 	.songContent>text {
 		display: block;
 		padding-bottom: 15rpx;
 	}
+
 	page {
 		color: #FFFFFF;
 	}
+
 	.song {
 		box-sizing: border-box;
 		padding-top: 90rpx;
