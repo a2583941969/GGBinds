@@ -53,6 +53,7 @@
 				
 			}
 		},
+		
 		methods:{
 			openDownLoad(){
 				this.$refs.popup.open()

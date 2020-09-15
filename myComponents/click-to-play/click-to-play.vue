@@ -6,11 +6,11 @@
 				<image src="../../static/icon/homeselect.png"></image>
 			</view>
 			<!-- 音乐名字 -->
-			<view class="songName">Shakingnesses/Camarazak</view>
+			<view class="songName">{{AlbumName}}/{{singer}}</view>
 			<!-- 音乐按钮 -->
 			<view class="albumPlay">
 				<!-- 阻止事件冒泡，点击对应按钮，开始不同的操作 -->
-				<image src="../../static/icon/play.png" mode="" @click.stop="playMusic"></image>
+				<image :src="this.$store.state.musicOn?'../../static/icon/pause.png':'../../static/icon/play.png'" mode="" @click.stop="playMusic"></image>
 				<image src="../../static/icon/skip-forward-filled.png" mode="" @click.stop="playNext"></image>
 			</view>
 		</view>
@@ -23,9 +23,9 @@
 		// props: ["AlbumImg", "AlbumName", "singer",songLength],
 		data() {
 			return {
-					AlbumName:'Meshugass',
-					singer:'Camarzak',
-					songLength:1200
+					AlbumName:'Love Story',
+					singer:'Taylor Swift',
+				
 			}
 		},
 		mounted() {
@@ -35,7 +35,7 @@
 			//点击底部音乐栏就去歌曲单页
 		toSong(){
 			uni.navigateTo({
-				url:`../../pages/song/song?AlbumName=${this.AlbumName}&singer=${this.singer}&songLength=${this.songLength}`
+				url:`../../pages/song/song?AlbumName=${this.AlbumName}&singer=${this.singer}`
 			})
 		},
 		playMusic(){
@@ -66,7 +66,7 @@
 		position: absolute;
 		top: -30rpx;
 		left: 30rpx;
-		z-index: 1000;
+		z-index: 2;
 		border-radius: 50%;
 		background-color: orange;
 		

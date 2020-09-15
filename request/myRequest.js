@@ -2,7 +2,6 @@
 const baseUrl ='http://localhost:3000/';
 //封装一个请求的函数
 export const myRequest=(options)=>{
-	options.method = options.method.toLowerCase()
 	if(options.method=="POST"){
 		return new Promise((resolve,reject)=>{
 			uni.request({

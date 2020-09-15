@@ -9,6 +9,7 @@
 		 <my-songlist :sid="sid" :sname="sname" :alnumName="alnumName" :singer="singer":sing_img="sing_img" :isAlnum="false"></my-songlist>
 		 <!-- 测试组件结束 -->
 		 <AlbumPlay></AlbumPlay>
+	
 	</view>
 </template>
 
@@ -38,11 +39,18 @@
 		},
 		
 		methods: {
+			async test(){
+				let res =await this.$myReq({
+					url:'song/url?id=1407551413',
+					methods:'GET'
+				});
+				console.log(res)
+			}
 			
 		},
 		
 		mounted(){
-	
+		
 		}
 	}
 </script>
