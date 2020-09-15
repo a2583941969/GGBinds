@@ -38,7 +38,6 @@
       handleCollect() {
         if (this.collect == true) {
           this.collect = false;
-          console.log("取消收藏成功")
           uni.showToast({
             title: "取消收藏成功",
             mask: true
